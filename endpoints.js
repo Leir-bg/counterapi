@@ -89,7 +89,6 @@ async function log(namespace, identifier){
         const logs = await Log.find({namespace, identifier})
 
         if(user.length === 0) return {status: 404}
-        console.log(user, logs)
         return {status: 200, logs}
     }
     catch(e){
